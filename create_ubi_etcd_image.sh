@@ -17,9 +17,6 @@ tar -zxvf etcd-${ETCD_VERSION}-linux-amd64.tar.gz \
 # Create a minimal container based on ubi-minimal image
 newcontainer=$(buildah from --name=etcd registry.access.redhat.com/ubi8/ubi-minimal)
 
-# Mount container and install basics
-scratchmnt=$(buildah mount $newcontainer)
-
 # Configure the container
 buildah config --created-by "Dirk Aumueller"  $newcontainer
 buildah config --author "Dirk Aumueller" --label name=dca $newcontainer
