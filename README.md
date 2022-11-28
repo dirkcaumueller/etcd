@@ -30,7 +30,7 @@ buildah rmi etcd
 Run bash script to create container image.
 
 ```bash
-./create_image.sh
+./create_ubi_etcd_image.sh
 ```
 
 Check if container image exists.
