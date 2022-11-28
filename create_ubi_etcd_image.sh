@@ -38,7 +38,7 @@ buildah config --env ETCD_DATA_DIR="/etcddata" $newcontainer
 # Copy etcd binaries into image
 buildah copy $newcontainer ./etcd /usr/local/bin/etcd
 buildah copy $newcontainer ./etcdctl /usr/local/bin/etcdctl
-buildah copy $newcontainer ./etcdctl /usr/local/bin/etcdutl
+buildah copy $newcontainer ./etcdutl /usr/local/bin/etcdutl
 
 # Set entrypoint
 buildah config --entrypoint /usr/local/bin/etcd $newcontainer
